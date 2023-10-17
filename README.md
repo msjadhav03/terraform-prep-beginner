@@ -175,7 +175,7 @@ resource "aws_instance" "app_server" {
 - Troubleshooting
     -  `terraform validate` can be used to find cause of problem.
 
-# Command Commands
+# Common Commands
 ```js
 terraform init
 terraform fmt
