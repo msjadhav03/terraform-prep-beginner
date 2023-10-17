@@ -10,16 +10,12 @@ terraform {
   required_version = ">= 1.2.0"
 }
 
-provider "aws" {
-  region = "ap-south-1"
-}
-
 resource "aws_instance" "app_server" {
   # ami is region specific 
-  ami           = "ami-0f2e255ec956ade7f"
-  instance_type = "t2.micro"
+  ami           = var.ami
+  instance_type = var.instance_type
 
   tags = {
-    Name = "ExampleAppServerInstance"
+    Name = var.name
   }
 }
